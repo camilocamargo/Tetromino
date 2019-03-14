@@ -33,8 +33,8 @@ public class Tetromino {
         return this;
     }
     
-    public abstract void rotarDerecha();
+    public void rotarDerecha(){}
     
-    public abstract void rotarIzquierda();
+    public void rotarIzquierda(){}
 
 }
