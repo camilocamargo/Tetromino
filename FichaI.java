@@ -1,12 +1,30 @@
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
-@objid ("42015724-69a9-4d39-9445-03dc371a2c29")
-public class FichaI {
-    @objid ("c8023d3f-863c-41fa-b6e8-43eb4eba6798")
-    private int forma;
-
-    @objid ("3124046f-fc50-4bb9-bd00-6b013e77abc1")
-    public void fichaI() {
+public class FichaI extends Tetromino{
+    
+    public static int[][] estado0 = {{0,0,1,0},{0,0,1,0},{0,0,1,0},{0,0,1,0}};
+    public static int[][] estado1 = {{0,0,0,0},{1,1,1,1},{0,0,0,0},{0,0,0,0}};
+    
+    public FichaI(){
+        super();
+        this.listaEstados.add(estado0, estado1);
     }
-
+    
+    @override
+    public void rotarDerecha(){
+        if(this.estado == 1){
+            estado = 0;
+        }else{
+            estado++;
+        }
+    }
+    
+    @override
+    public void rotarIzquierda(){
+        if(this.estado == 0){
+            estado = 1;
+        }else{
+            estado--;
+        }
+    }
 }
