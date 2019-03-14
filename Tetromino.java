@@ -2,41 +2,39 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 @objid ("8dc96cac-759e-43fb-96d9-3ffd2a3d0239")
 public class Tetromino {
-    /**
-     * <Enter note text here>
-     */
-    
-    private char listaEstados;
-
-    /**
-     * <Enter note text here>
-     */
+        
+    private ArrayList listaEstados = new ArrayList();
     
     private boolean modificacion;
 
-    
     private int tamañoFicha;
-
-    /**
-     * <Enter note text here>
-     */
-    public static  boolean fichaModificada();
-
-    int getTamañoFicha() {
-       
-        return this.tamañoFicha;
+    
+    private int estado;
+    
+    public Tetromino(){
+        this.estado = 0;
     }
 
+    public boolean fichaModificada();
+
+    public int getTamañoFicha() {
+       return this.tamañoFicha;
+    }
   
-    void setTamañoFicha(final int value) {
-      
+    public void setTamañoFicha(int value) {
         this.tamañoFicha = value;
     }
     
-    public static void obtenerEstado(int matris[][]){
+    public static void obtenerEstado(){
+        return this.listaEstados.get(this.estado);
     }
     
     public static void obtenerFicha(){
+        return this;
     }
+    
+    public void rotarDerecha(){}
+    
+    public void rotarIzquierda(){}
 
 }
