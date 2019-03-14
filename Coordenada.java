@@ -9,15 +9,19 @@ public class Coordenada {
     private int columna;
 
     @objid ("7ec3a0ea-cdb5-4516-b165-6e3a8b443ea5")
-    public static void coordenada() {
+    public Coordenada(int fila, int columna) {
+        this.fila = fila;
+        this.columna = columna;
     }
 
     @objid ("967b47fc-5a6c-4b7a-8901-8febd6926ce1")
-    public static void getFila(final int ) {
+    public int getFila() {
+        return this.fila
     }
 
     @objid ("485a0875-43d3-47c1-ac05-fdb8846195c4")
-    public static void getColumna(final int ) {
+    public int getColumna() {
+        return this.columna;
     }
 
 }
