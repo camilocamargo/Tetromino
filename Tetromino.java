@@ -26,7 +26,7 @@ public class Tetromino {
     }
     
     public static void obtenerEstado(){
-        return this.estado;
+        return this.listaEstados.get(this.estado);
     }
     
     public static void obtenerFicha(){
