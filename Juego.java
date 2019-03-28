@@ -16,13 +16,7 @@ public class Juego {
       
     }
         
-    public void desplazarIzquierda(Coordenada){
-      
-    }
     
-    public void desplazarDerecha(Coordenada){
-      
-    }
     
     public boolean fichaTerminada(){
       
