@@ -1,6 +1,3 @@
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
-@objid ("8dc96cac-759e-43fb-96d9-3ffd2a3d0239")
 public class Tetromino {
         
     private ArrayList estados = new ArrayList();
@@ -14,23 +11,30 @@ public class Tetromino {
 
     
     public static void obtenerEstado(){
-        return this.estados.get(this.estado);
-    }
-    
-    public static void obtenerFicha(){
-        return this;
+        return this.estado;
     }
     
     public void rotarDerecha(){}
     
     public void rotarIzquierda(){}
    
-    public void desplazarIzquierda(Coordenada){}
     
-    public void desplazarDerecha(Coordenada){}
+	public void desplazarIzquierda(Coordenada){
+		 int [] coordenada = {this.filaInicio, this.filaFin, this.columnaInicio--, this.columnaFin--};
+		
+	}
     
-    public Coordenada obtenerUbicación(){}
+    public void desplazarDerecha(Coordenada){
+		 int [] coordenada = {this.filaInicio, this.filaFin, this.columnaInicio++, this.columnaFin++};
+	}
+    
+    public Coordenada obtenerUbicación(){
+		int [] cordenadaFinal = {this.filaInicio, this.filaFin, this.columnaInicio, this.columnaFin};
+	
+	}
         
-    public void caer(){}
+    public void caer(){
+		int [] coordenada = {this.filaInicio++, this.filaFin++, this.columnaInicio, this.columnaFin};
+	}
 
 }
