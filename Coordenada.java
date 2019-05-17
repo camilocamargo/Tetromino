@@ -1,21 +1,20 @@
-
 public class Coordenada {
     
-    private int filaInicio;
-    private int filaFin;
-    private int columnaInicio;
-    private int columnaFin;
+    public int filaInicio;
+    public int filaFin;
+    public int columnaInicio;
+    public int columnaFin;
 
     public Coordenada(int filaInicio, int filaFin, int columnaInicio, int columnaFin) {
         this.filaInicio = filaInicio;
-		this.filaFin = filaFin;
+        this.filaFin = filaFin;
         this.columnaInicio = columnaInicio;
-		this.columnaFin = columnaFin;
+	this.columnaFin = columnaFin;
     }
 
 
-    public int getCoordena() {
+    public int[] getCoordena() {
         int [] coordenada = {this.filaInicio, this.filaFin, this.columnaInicio, this.columnaFin};
-		return; 
+	return coordenada; 
     }
 }
