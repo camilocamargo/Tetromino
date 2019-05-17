@@ -7,10 +7,6 @@ package tetromino;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author BOG-A411-E-010
- */
 public class Tetromino {
         
     private ArrayList estados = new ArrayList();
