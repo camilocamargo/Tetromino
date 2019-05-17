@@ -1,3 +1,16 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package tetromino;
+
+import java.util.ArrayList;
+
+/**
+ *
+ * @author BOG-A411-E-010
+ */
 public class Tetromino {
         
     private ArrayList estados = new ArrayList();
@@ -5,12 +18,13 @@ public class Tetromino {
     private int estado;
     private Coordenada ubicacion;
     
-    public Tetromino(coordenada){
+    public Tetromino(Coordenada coordenada){
         this.estado = 0;
+        this.ubicacion = coordenada;
     }
 
     
-    public static void obtenerEstado(){
+    public int obtenerEstado(){
         return this.estado;
     }
     
@@ -18,23 +32,23 @@ public class Tetromino {
     
     public void rotarIzquierda(){}
    
+    public void desplazarIzquierda(){
+        this.ubicacion.columnaInicio--;
+        this.ubicacion.columnaFin--;
+    }
     
-	public void desplazarIzquierda(Coordenada){
-		 int [] coordenada = {this.filaInicio, this.filaFin, this.columnaInicio--, this.columnaFin--};
-		
-	}
-    
-    public void desplazarDerecha(Coordenada){
-		 int [] coordenada = {this.filaInicio, this.filaFin, this.columnaInicio++, this.columnaFin++};
-	}
+    public void desplazarDerecha(){
+        this.ubicacion.columnaInicio++;
+        this.ubicacion.columnaFin++;
+    }
     
     public Coordenada obtenerUbicación(){
-		int [] cordenadaFinal = {this.filaInicio, this.filaFin, this.columnaInicio, this.columnaFin};
-	
-	}
+        return this.ubicacion;
+    }
         
-    public void caer(){
-		int [] coordenada = {this.filaInicio++, this.filaFin++, this.columnaInicio, this.columnaFin};
-	}
+    public void caer(int filaInicio, int filaFin){
+        this.ubicacion.filaInicio = filaInicio;
+        this.ubicacion.filaFin = filaFin;
+    }
 
 }
