@@ -1,30 +1,29 @@
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
 public class FichaI extends Tetromino{
     
-    public static int[][] estado0 = {{0,0,1,0},{0,0,1,0},{0,0,1,0},{0,0,1,0}};
-    public static int[][] estado1 = {{0,0,0,0},{1,1,1,1},{0,0,0,0},{0,0,0,0}};
+    public int[][] estado0 = {{0,0,1,0},{0,0,1,0},{0,0,1,0},{0,0,1,0}};
+    public int[][] estado1 = {{0,0,0,0},{1,1,1,1},{0,0,0,0},{0,0,0,0}};
     
-    public FichaI(){
-        super();
-        this.listaEstados.add(estado0, estado1);
+    public FichaI(Coordenada ubicacion){
+        super(ubicacion);
+        this.estados.add(0, this.estado0);
+	    this.estados.add(1, this.estado1);
     }
     
-    @override
+    @Override
     public void rotarDerecha(){
         if(this.estado == 1){
-            estado = 0;
+            this.estado = 0;
         }else{
-            estado++;
+            this.estado++;
         }
     }
     
-    @override
+    @Override
     public void rotarIzquierda(){
         if(this.estado == 0){
-            estado = 1;
+            this.estado = 1;
         }else{
-            estado--;
+            this.estado--;
         }
     }
 }
