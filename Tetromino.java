@@ -1,22 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package tetromino;
-
 import java.util.ArrayList;
 
 public class Tetromino {
         
-    private ArrayList estados = new ArrayList();
+    protected ArrayList<int[][]> estados = new ArrayList<int[][]>();
     
-    private int estado;
-    private Coordenada ubicacion;
+    protected int estado;
+    protected Coordenada ubicacion;
     
-    public Tetromino(Coordenada coordenada){
+    public Tetromino(Coordenada ubicacion){
         this.estado = 0;
-        this.ubicacion = coordenada;
+        this.ubicacion = ubicacion;
     }
 
     
@@ -46,5 +39,4 @@ public class Tetromino {
         this.ubicacion.filaInicio = filaInicio;
         this.ubicacion.filaFin = filaFin;
     }
-
 }
